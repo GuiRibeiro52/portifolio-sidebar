@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div className="flex  h-screen">      
+    <div className="flex  h-screen ml-[250px]">      
       <main className="flex-1 bg-white flex items-center justify-center px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl">          
           <div className="text-center lg:text-left lg:w-1/2 space-y-6">

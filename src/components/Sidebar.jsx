@@ -9,7 +9,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 h-full w-64 bg-black text-white flex flex-col justify-between">
+    <div className="fixed top-0 left-0 h-full w-60 bg-black text-white flex flex-col justify-between">
       <div>
         <div className="flex pt-14 px-10"><img src="logoGR.svg" alt="GR logo" className="bg-white size-9/12"/></div>
         <nav className="mt-24 px-10">
