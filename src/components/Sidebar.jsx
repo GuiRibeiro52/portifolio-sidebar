@@ -1,32 +1,37 @@
 import { useState } from "react";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { NavLink } from "react-router-dom"; 
 
 function Sidebar() {
-  const [activeLink, setActiveLink] = useState("home"); 
+  const [activeLink, setActiveLink] = useState("home");
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
   };
 
   return (
-    <div className="fixed top-0 left-0 h-full w-60 bg-black text-white flex flex-col justify-between">
+    <div className="fixed top-0 left-0 h-full w-64 bg-black text-white flex flex-col justify-between">
       <div>
-        <div className="flex pt-14 px-10"><img src="logoGR.svg" alt="GR logo" className="bg-white size-9/12"/></div>
+        <div className="flex pt-14 px-10">
+          <img src="logoGR.svg" alt="GR logo" className="bg-white size-9/12" />
+        </div>
         <nav className="mt-24 px-10">
-          <ul className="space-y-4 text-xl">
+          <ul className="space-y-4 text-xl text-gray-400">
             {[
-              { id: "home", label: "HOME" },
-              { id: "about", label: "ABOUT" },
-              { id: "services", label: "SERVICES" },
-              { id: "works", label: "WORKS" },
-              { id: "blogs", label: "BLOGS" },
-              { id: "contact", label: "CONTACT" },
+              { id: "home", label: "HOME", path: "/" },
+              { id: "about", label: "ABOUT", path: "/about" },
+              { id: "services", label: "SERVICES", path: "/services" },
+              { id: "works", label: "WORKS", path: "/works" },
+              { id: "blogs", label: "BLOGS", path: "/blogs" },
+              { id: "contact", label: "CONTACT", path: "/contact" },
             ].map((link) => (
               <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
+                <NavLink
+                  to={link.path} 
                   onClick={() => handleLinkClick(link.id)}
-                  className="relative text-xl group"
+                  className={({ isActive }) =>
+                    `relative text-xl group ${isActive ? "text-white" : ""}`
+                  }
                 >
                   {link.label}
                   <span
@@ -36,7 +41,7 @@ function Sidebar() {
                         : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   ></span>
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
