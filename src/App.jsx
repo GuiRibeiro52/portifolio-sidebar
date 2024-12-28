@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,13 +9,14 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <div className="flex h-screen">
-        
-        <Sidebar />
-        <div className="flex-1 bg-white">
-          <Routes>
+    <div className="flex">      
+      <Sidebar />      
+      <div className="flex-1 bg-white overflow-hidden">
+        <AnimatePresence mode="wait" initial={false}>
+          <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
@@ -22,9 +24,9 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </AnimatePresence>
       </div>
-    </Router>
+    </div>
   );
 }
 

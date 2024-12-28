@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -17,7 +17,7 @@ function Sidebar() {
         </div>
         <nav className="mt-24 px-10">
           <ul className="space-y-4 text-xl text-gray-400">
-            {[
+            {[ 
               { id: "home", label: "HOME", path: "/" },
               { id: "about", label: "ABOUT", path: "/about" },
               { id: "services", label: "SERVICES", path: "/services" },
@@ -27,7 +27,7 @@ function Sidebar() {
             ].map((link) => (
               <li key={link.id}>
                 <NavLink
-                  to={link.path} 
+                  to={link.path}
                   onClick={() => handleLinkClick(link.id)}
                   className={({ isActive }) =>
                     `relative text-xl group ${isActive ? "text-white" : ""}`
