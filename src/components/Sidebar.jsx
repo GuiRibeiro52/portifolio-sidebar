@@ -48,20 +48,18 @@ function Sidebar() {
         </nav>
       </div>
       <div className="flex items-center justify-between mt-4 px-10 gap-4">
-        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/" target="_blank">
           <FaWhatsapp size={40} color="#25D366" />
         </a>
         <a
           href="https://www.instagram.com/guilhermeribeiroo"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <FaInstagram size={40} color="#E4405F" />
         </a>
         <a
           href="https://www.linkedin.com/"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <FaLinkedin size={40} color="#0077B5" />
         </a>
