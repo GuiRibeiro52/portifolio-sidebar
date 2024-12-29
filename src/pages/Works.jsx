@@ -77,13 +77,13 @@ function Works() {
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">
-                    <h2 className="text-3xl font-bold">{selectedWork.title}</h2>
+                    <h2 className="text-4xl font-bold">{selectedWork.title}</h2>
                     {selectedWork.description ? (
                       selectedWork.description
                         .split("\n")
                         .map((line, index) =>
                           line.trim() ? (
-                            <p key={index} className="mb-2">
+                            <p key={index} className="mb-2 italic">
                               {line}
                             </p>
                           ) : (
@@ -91,17 +91,17 @@ function Works() {
                           )
                         )
                     ) : (
-                      <p>Nenhuma descrição adicional.</p>
+                      <p className="mb-2 italic">No aditional description.</p>
                     )}
                     <div className="flex gap-4 mt-6">
                       <Link
-                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                        className="px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:bg-gradient-to-t hover:scale-110 duration-500 transition-transform"
                         to={selectedWork.link}
                       >
                         Visit Site
                       </Link>
                       <button
-                        className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800"
+                        className="px-4 py-2 bg-black text-white hover:scale-110 duration-500 transition-transform"
                         onClick={closeModal}
                       >
                         Close
@@ -116,16 +116,15 @@ function Works() {
         {visibleCount < works.length && ( 
           <div className="flex justify-center mt-12">
             <button
-              className="px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition"
+              className="px-6 py-3 bg-black text-white font-semibold hover:scale-110 duration-500 transition-transform"
               onClick={loadMore}
             >
-              Load more →
+              Load more
             </button>
           </div>
         )}
       </div>
-    </motion.div>
+    </motion.div>    
   );
 }
-
 export default Works;

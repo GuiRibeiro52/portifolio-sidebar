@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <motion.div
+    <div className="flex h-screen ml-[250px] overflow-hidden">
+      <motion.div
       className="flex h-full ml-[250px] p-10 justify-center items-center"
       initial={{ opacity: 0, y: 50 }} 
       animate={{ opacity: 1, y: 0 }}  
@@ -23,6 +24,8 @@ function Home() {
         </div>
       </div>
     </motion.div>
+    </div>
+    
   );
 }
 
