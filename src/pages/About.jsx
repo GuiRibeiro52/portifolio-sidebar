@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <div className="flex h-screen ml-[250px] overflow-hidden">
+    <div className="flex h-screen justify-center overflow-hidden">
       <motion.div
-        className="flex-1 flex items-center justify-center overflow-hidden"
+        className="flex-1 flex items-center ml-[260px] justify-center overflow-hidden p-2"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
