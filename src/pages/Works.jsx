@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { works } from "../data";
-import { Link } from "react-router-dom";
 
 function Works() {
   const [selectedWork, setSelectedWork] = useState(null);
@@ -94,12 +93,9 @@ function Works() {
                       <p className="mb-2 italic">No aditional description.</p>
                     )}
                     <div className="flex gap-4 mt-6">
-                      <Link
-                        className="px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:bg-gradient-to-t hover:scale-110 duration-500 transition-transform"
-                        to={selectedWork.link}
-                      >
-                        Visit Site
-                      </Link>
+                      <a className="px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:bg-gradient-to-t hover:scale-110 duration-500 transition-transform"
+                        href={selectedWork.link} target="_blank">Visit Site
+                      </a>
                       <button
                         className="px-4 py-2 bg-black text-white hover:scale-110 duration-500 transition-transform"
                         onClick={closeModal}
