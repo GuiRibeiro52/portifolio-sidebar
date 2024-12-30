@@ -28,9 +28,9 @@ function About() {
               </h1>
               <div className="mt-8">
                 <img
-                  src="src/assets/images/Image.png"
+                  src="src/assets/images/Img2.png"
                   alt="Guilherme Ribeiro"
-                  className="mx-auto w-[450px] h-450px] rounded-full"
+                  className="mx-auto w-[420px] h-420px] rounded-full"
                 />
               </div>
               <div className="text-center mt-4">

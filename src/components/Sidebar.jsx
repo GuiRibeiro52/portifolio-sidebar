@@ -20,9 +20,7 @@ function Sidebar() {
             {[ 
               { id: "home", label: "HOME", path: "/" },
               { id: "about", label: "ABOUT", path: "/about" },
-              { id: "services", label: "SERVICES", path: "/services" },
               { id: "works", label: "WORKS", path: "/works" },
-              { id: "blogs", label: "BLOGS", path: "/blogs" },
               { id: "contact", label: "CONTACT", path: "/contact" },
             ].map((link) => (
               <li key={link.id}>
@@ -48,7 +46,7 @@ function Sidebar() {
         </nav>
       </div>
       <div className="flex items-center justify-between mt-4 px-10 gap-4">
-        <a href="https://wa.me/" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5516994664262" target="_blank">
           <FaWhatsapp size={40} color="#25D366" />
         </a>
         <a
