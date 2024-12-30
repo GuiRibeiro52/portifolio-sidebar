@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Sidebar() {
+  const { t, i18n } = useTranslation();
   const [activeLink, setActiveLink] = useState("home");
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
+  };
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -17,11 +23,11 @@ function Sidebar() {
         </div>
         <nav className="mt-24 px-10">
           <ul className="space-y-4 text-xl text-gray-400">
-            {[ 
-              { id: "home", label: "HOME", path: "/" },
-              { id: "about", label: "ABOUT", path: "/about" },
-              { id: "works", label: "WORKS", path: "/works" },
-              { id: "contact", label: "CONTACT", path: "/contact" },
+            {[
+              { id: "home", label: t("sidebar.home"), path: "/" },
+              { id: "about", label: t("sidebar.about"), path: "/about" },
+              { id: "works", label: t("sidebar.works"), path: "/works" },
+              { id: "contact", label: t("sidebar.contact"), path: "/contact" },
             ].map((link) => (
               <li key={link.id}>
                 <NavLink
@@ -46,25 +52,33 @@ function Sidebar() {
         </nav>
       </div>
       <div className="flex items-center justify-between mt-4 px-10 gap-4">
-        <a href="https://api.whatsapp.com/send?phone=5516994664262" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5516994664262" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp size={40} color="#25D366" />
         </a>
-        <a
-          href="https://www.instagram.com/guilhermeribeiroo"
-          target="_blank"
-        >
+        <a href="https://www.instagram.com/guilhermeribeiroo" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={40} color="#E4405F" />
         </a>
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-        >
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={40} color="#0077B5" />
         </a>
       </div>
+      <div className="flex justify-center gap-4 mt-6">
+        <button
+          onClick={() => changeLanguage("en")}
+          className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
+        >
+          EN
+        </button>
+        <button
+          onClick={() => changeLanguage("pt")}
+          className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
+        >
+          PT
+        </button>
+      </div>
       <div className="p-8 text-sm opacity-80">
         <p>&copy; 2024 Guilherme Ribeiro.</p>
-        <p>All rights reserved.</p>
+        <p>{t("sidebar.rights")}</p>
       </div>
     </div>
   );

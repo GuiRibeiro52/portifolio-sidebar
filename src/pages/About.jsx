@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex h-screen justify-center overflow-hidden">
       <motion.div
@@ -16,28 +19,25 @@ function About() {
             transform: "scale(calc(100vh / (1080px)))",
             transformOrigin: "top center",
           }}
-        >          
+        >
           <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full">
-           
             <div className="lg:w-1/2 text-center lg:text-left flex flex-col">
               <p className="font-ibmPlex text-lg italic font-semibold">
-                Nice to meet you!
+                {t("about.greeting")}
               </p>
               <h1 className="text-5xl lg:text-6xl font-bold mt-4 font-ibmPlex">
-                WELCOME TO...
+                {t("about.welcome")}
               </h1>
               <div className="mt-8">
                 <img
                   src="src/assets/images/Img2.png"
-                  alt="Guilherme Ribeiro"
+                  alt={t("about.altText", { name: "Guilherme Ribeiro" })}
                   className="mx-auto w-[420px] h-420px] rounded-full"
                 />
               </div>
               <div className="text-center mt-4">
                 <p className="font-ibmPlex italic font-bold text-2xl">
-                  Front-End Developer{" "}
-                  <span className="font-normal not-italic">based in</span>{" "}
-                  Brazil
+                  {t("about.developer")} <spam className="font-normal">{t("about.based")}</spam> {t("about.country")}                
                 </p>
               </div>
             </div>
@@ -65,14 +65,10 @@ function About() {
                       10+
                     </p>
                     <p className="text-lg font-bold italic leading-none">
-                      Years <br />
-                      experience...
+                      {t("about.years")}
                     </p>
                   </div>
-                  <p className="mt-2 text-gray-700">
-                    Hello there! My name is Guilherme Ribeiro. I am a Front-End
-                    developer, and I’m very passionate and dedicated to my work.
-                  </p>
+                  <p className="mt-2 text-gray-700">{t("about.description")}</p>
                 </div>
                 <div className="font-ibmPlex">
                   <div className="flex gap-3 items-center">
@@ -80,22 +76,18 @@ function About() {
                       14
                     </p>
                     <p className="text-lg font-bold italic leading-none">
-                      Clients <br />
-                      Worldwide...
+                      {t("about.clients")}
                     </p>
                   </div>
                   <p className="mt-2 text-gray-700">
-                    With 10+ years experience as a professional graphic
-                    designer, I have acquired the skills and knowledge necessary
-                    to make your project a success.
+                    {t("about.clientsDescription")}
                   </p>
                 </div>
               </div>
 
               <div className="bg-black text-white p-6 mt-10 rounded-lg">
                 <p className="italic text-lg">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Faucibus sed sit ultrices et sed metus sollicitudin.”
+                  {t("about.quote")}
                 </p>
               </div>
             </div>
