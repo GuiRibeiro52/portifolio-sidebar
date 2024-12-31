@@ -33,7 +33,7 @@ i18n
             "Hello there! My name is Guilherme Ribeiro. I am a Front-End developer, and I’m very passionate and dedicated to my work.",
             clientsDescription:
             "With 10+ years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.",
-            quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin.”",
+            quote: "Horace Mann (1796 - 1859) said: “Be ashamed to die until you have won some victory for mankind.” This is my victory.",
             altText: "Image of {{name}}",
           },
           contact: {
@@ -103,7 +103,7 @@ i18n
             "Olá! Meu nome é Guilherme Ribeiro. Sou Desenvolvedor Front-End e sou muito apaixonado e dedicado ao meu trabalho.",
             clientsDescription:
             "Com mais de 10 anos de experiência como designer gráfico profissional, adquiri as habilidades e conhecimentos necessários para fazer do seu projeto um sucesso.",
-            quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin.”",
+            quote: "Horace Mann (1796 - 1859) disse: \"Tenha vergonha de morrer até você ter conquistado alguma vitória para a humanidade\". Essa é a minha vitória.",
             altText: "Imagem de {{name}}",
           },
           contact: {

@@ -85,7 +85,7 @@ function About() {
                 </div>
               </div>
 
-              <div className="bg-black text-white p-6 mt-10 rounded-lg">
+              <div className="bg-black text-white p-6 mt-10">
                 <p className="italic text-lg">
                   {t("about.quote")}
                 </p>

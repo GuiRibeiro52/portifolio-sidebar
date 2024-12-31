@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import brazilFlag from "../assets/images/flag-icons/brazilFlag.png"
+import usaFlag from "../assets/images/flag-icons/usaFlag.png"
 
 function Sidebar() {
   const { t, i18n } = useTranslation();
@@ -65,15 +67,13 @@ function Sidebar() {
       <div className="flex justify-center gap-4 mt-6">
         <button
           onClick={() => changeLanguage("en")}
-          className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
-        >
-          EN
+          className="px-4 py-2  text-white rounded "
+        ><img src={usaFlag} alt="brazil flag" className="w-8 rounded-full hover:scale-125 duration-1000 transition-transform"/>
         </button>
         <button
           onClick={() => changeLanguage("pt")}
-          className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
-        >
-          PT
+          className="px-4 py-2  text-white rounded-full"
+        ><img src={brazilFlag} alt="brazil flag" className="w-8 rounded-full hover:scale-125 duration-1000 transition-transform"/>
         </button>
       </div>
       <div className="p-8 text-sm opacity-80">
