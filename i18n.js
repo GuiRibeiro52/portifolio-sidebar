@@ -1,12 +1,12 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
-  .use(LanguageDetector) 
-  .use(initReactI18next) 
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    fallbackLng: 'pt', 
+    fallbackLng: "pt",
     resources: {
       en: {
         translation: {
@@ -15,11 +15,11 @@ i18n
             about: "ABOUT",
             works: "WORKS",
             contact: "CONTACT",
-            rights: "All rights reserved."
+            rights: "All rights reserved.",
           },
           home: {
             title: "MY NAME IS...",
-            subtitle: "Front-End Developer based in Brazil"
+            subtitle: "Front-End Developer based in Brazil",
           },
           about: {
             greeting: "Nice to meet you!",
@@ -30,20 +30,28 @@ i18n
             years: "Years experience...",
             clients: "Clients Worldwide...",
             description:
-            "Hello there! My name is Guilherme Ribeiro. I am a Front-End developer, and I’m very passionate and dedicated to my work.",
+              "Hello there! My name is Guilherme Ribeiro. I am a Front-End developer, and I’m very passionate and dedicated to my work.",
             clientsDescription:
-            "With 10+ years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.",
-            quote: "Horace Mann (1796 - 1859) said: “Be ashamed to die until you have won some victory for mankind.” This is my victory.",
+              "With 10+ years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.",
+            quote:
+              "Horace Mann (1796 - 1859) said: “Be ashamed to die until you have won some victory for mankind.” This is my victory.",
             altText: "Image of {{name}}",
           },
           contact: {
-            title: "REACH OUT ME",
+            title: "REACH OUT TO ME",
             address: "City: Franca, State: São Paulo, Country: Brazil.",
             project: "ANY PROJECT?",
             name: "Name",
             email: "Email",
             message: "Message",
-            submit: "Submit now →"
+            submit: "Submit now →",
+            successMessageTitle: "Message Sent!",
+            successMessageBody:
+              "Thank you for reaching out. We will respond shortly.",
+            errorRequired: "All fields are required.",
+            errorInvalidEmail: "Please enter a valid email address.",
+            errorSubmission:
+              "There was an error submitting the message. Please try again later.",
           },
           works: {
             sectionTitle: "Works",
@@ -71,12 +79,9 @@ i18n
               title: "Furniro",
               description:
                 "Furniro is an application developed to offer online furniture sales. The application has a user-friendly interface, with interactive features to improve the user experience.\n The project was developed with ReactTS + Vite and Tailwindcss, using the Firebase API for user authentication, ViaCep to fill in the mail fields, the product images are hosted in an AWS bucket and the project is running on an AWS EC2 instance, using modern technologies to provide a rich and interactive experience to users.",
-              shortDescription: "Check the site by clicking the link below.",
             },
-          }
-        }
-
-
+          },
+        },
       },
       pt: {
         translation: {
@@ -85,25 +90,26 @@ i18n
             about: "SOBRE",
             works: "TRABALHOS",
             contact: "CONTATO",
-            rights: "Todos os direitos reservados."
+            rights: "Todos os direitos reservados.",
           },
           home: {
             title: "MEU NOME É...",
-            subtitle: "Desenvolvedor Front-End"
+            subtitle: "Desenvolvedor Front-End",
           },
           about: {
             greeting: "Prazer em conhecê-lo!",
             welcome: "BEM-VINDO...",
             developer: "Desenvolvedor Front-End",
-            based: "",
-            country: "",
+            based: "baseado em",
+            country: "Brasil",
             years: "Anos de experiência...",
             clients: "Clientes em todo o mundo...",
             description:
-            "Olá! Meu nome é Guilherme Ribeiro. Sou Desenvolvedor Front-End e sou muito apaixonado e dedicado ao meu trabalho.",
+              "Olá! Meu nome é Guilherme Ribeiro. Sou Desenvolvedor Front-End e sou muito apaixonado e dedicado ao meu trabalho.",
             clientsDescription:
-            "Com mais de 10 anos de experiência como designer gráfico profissional, adquiri as habilidades e conhecimentos necessários para fazer do seu projeto um sucesso.",
-            quote: "Horace Mann (1796 - 1859) disse: \"Tenha vergonha de morrer até você ter conquistado alguma vitória para a humanidade\". Essa é a minha vitória.",
+              "Com mais de 10 anos de experiência como designer gráfico profissional, adquiri as habilidades e conhecimentos necessários para fazer do seu projeto um sucesso.",
+            quote:
+              "Horace Mann (1796 - 1859) disse: \"Tenha vergonha de morrer até você ter conquistado alguma vitória para a humanidade\". Essa é a minha vitória.",
             altText: "Imagem de {{name}}",
           },
           contact: {
@@ -113,7 +119,14 @@ i18n
             name: "Nome",
             email: "E-mail",
             message: "Mensagem",
-            submit: "Enviar agora →"
+            submit: "Enviar agora →",
+            successMessageTitle: "Mensagem enviada!",
+            successMessageBody:
+              "Obrigado por entrar em contato. Responderemos em breve.",
+            errorRequired: "Todos os campos são obrigatórios.",
+            errorInvalidEmail: "Por favor, insira um e-mail válido.",
+            errorSubmission:
+              "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.",
           },
           works: {
             sectionTitle: "Trabalhos",
@@ -141,12 +154,11 @@ i18n
               title: "Furniro",
               description:
                 "Furniro é um aplicativo desenvolvido para oferecer vendas de móveis online. O aplicativo tem uma interface amigável, com recursos interativos para melhorar a experiência do usuário.\n O projeto foi desenvolvido com ReactTS + Vite e Tailwindcss, usando a API do Firebase para autenticação de usuários, ViaCep para preenchimento dos campos de correspondência, as imagens dos produtos estão hospedadas em um bucket AWS e o projeto está rodando em uma instância AWS EC2, utilizando tecnologias modernas para proporcionar uma experiência rica e interativa aos usuários.",
-              
             },
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   });
 
 export default i18n;
