@@ -27,12 +27,13 @@ i18n
             developer: "Front-End Developer",
             based: "based in",
             country: "Brazil",
-            years: "Years experience...",
-            clients: "Clients Worldwide...",
+            city: "Brazil, Franca",
+            years: "Years as an Inspiring Educator...",
+            clients: "Development Projects",
             description:
-              "Hello there! My name is Guilherme Ribeiro. I am a Front-End developer, and I’m very passionate and dedicated to my work.",
+              "Hello there! I am Guilherme Ribeiro, passionate about teaching and learning. With over 10 years of experience as a Math teacher, I have developed a unique ability to solve problems and teach clear solutions. This passion for learning has led me to a new journey in the field of Information Technology.",
             clientsDescription:
-              "With 10+ years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.",
+              "I am currently a Systems Analysis and Development student, combining my love of logic with practical programming skills. I have created and implemented projects that showcase my creativity and dedication. I am always exploring ways to turn ideas into innovative solutions.",
             quote:
               "Horace Mann (1796 - 1859) said: “Be ashamed to die until you have won some victory for mankind.” This is my victory.",
             altText: "Image of {{name}}",
@@ -63,22 +64,32 @@ i18n
             loadMore: "Load more",
             brasfal: {
               title: "Brasfal",
+              subtitle: "Web Development",
               description: "",
             },
             grMaxPlus: {
               title: "GR MAX PLUS",
+              subtitle: "UX case study",
               description:
                 "🚀 Presenting my project: HBO Max Clone \nI created a functional clone of HBO Max, where I explored technologies such as React, TypeScript, TailwindCSS, React Router, and Slick Slider. The website includes:\n🎬 Films and series with complete details (cast, trailers, where to watch).\n📅 Seasons and episodes with pagination for efficient navigation.\n🔍 Smart search, searching for films, series and genres.\n✨ Themed sections such as Marvel Universe, Star Wars, and Harry Potter.\n💻 Automatic and responsive carousels for a great experience on any device.",
             },
             foreverHomes: {
               title: "Forever Homes",
+              subtitle: "UX case study",
               description:
                 "Forever Homes is a web application designed to help rescue and rehabilitate severely injured or neglected dogs and cats. The application offers features for adopting animals, donating to the cause, volunteering, and information about upcoming events.\n FEATURES\nAdopt an Animal: Users can apply to adopt animals through a dedicated form.\nDonate: Users can donate to the cause using a variety of payment methods.\nNewsletter Subscription: Users can sign up for the newsletter to receive updates.",
             },
             furniro: {
               title: "Furniro",
+              subtitle: "UX case study",
               description:
                 "Furniro is an application developed to offer online furniture sales. The application has a user-friendly interface, with interactive features to improve the user experience.\n The project was developed with ReactTS + Vite and Tailwindcss, using the Firebase API for user authentication, ViaCep to fill in the mail fields, the product images are hosted in an AWS bucket and the project is running on an AWS EC2 instance, using modern technologies to provide a rich and interactive experience to users.",
+            },
+            chromebooks: {
+              subtitle: "Application development",
+              title: "Chromebook Management",
+              description:
+                "I recently created a Chromebook Management System, created to meet a real need in my work: organizing the loan and return of devices in an efficient and transparent way.",
             },
           },
         },
@@ -100,14 +111,15 @@ i18n
             greeting: "Prazer em conhecê-lo!",
             welcome: "BEM-VINDO...",
             developer: "Desenvolvedor Front-End",
-            based: "baseado em",
-            country: "Brasil",
-            years: "Anos de experiência...",
-            clients: "Clientes em todo o mundo...",
+            based: "",
+            country: "",
+            city: "Franca, Brasil",
+            years: "Anos como Educador Inspirador...",
+            clients: "Projetos de Desenvolvimento.",
             description:
-              "Olá! Meu nome é Guilherme Ribeiro. Sou Desenvolvedor Front-End e sou muito apaixonado e dedicado ao meu trabalho.",
+              "Olá! Meu nome é Guilherme Ribeiro, um apaixonado por ensinar e aprender. Com mais de 10 anos de experiência como professor de Matemática, desenvolvi uma habilidade única de resolver problemas e ensinar soluções claras. Essa paixão pelo aprendizado me levou a uma nova jornada na área de Tecnologia da Informação.",
             clientsDescription:
-              "Com mais de 10 anos de experiência como designer gráfico profissional, adquiri as habilidades e conhecimentos necessários para fazer do seu projeto um sucesso.",
+              "Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas, combinando meu amor pela lógica com habilidades práticas de programação. Já criei e implementei projetos que mostram minha criatividade e dedicação. Estou sempre explorando maneiras de tornar ideias em soluções inovadoras.",
             quote:
               "Horace Mann (1796 - 1859) disse: \"Tenha vergonha de morrer até você ter conquistado alguma vitória para a humanidade\". Essa é a minha vitória.",
             altText: "Imagem de {{name}}",
@@ -138,22 +150,32 @@ i18n
             loadMore: "Carregar mais",
             brasfal: {
               title: "Brasfal",
+              subtitle: "Desenvolvimento Web",
               description: "",
             },
             grMaxPlus: {
               title: "GR MAX PLUS",
+              subtitle: "Caso de Estudo UX",
               description:
                 "🚀 Apresentando meu projeto: Clone do HBO Max \nCriei um clone funcional do HBO Max, onde explorei tecnologias como React, TypeScript, TailwindCSS, React Router e Slick Slider. O site inclui:\n🎬 Filmes e séries com detalhes completos (elenco, trailers, onde assistir).\n📅 Temporadas e episódios com paginação para navegação eficiente.\n🔍 Pesquisa inteligente, pesquisando por filmes, séries e gêneros.\n✨ Seções temáticas como Universo Marvel, Star Wars e Harry Potter.\n💻 Carrosséis automáticos e responsivos para uma ótima experiência em qualquer dispositivo.",
             },
             foreverHomes: {
               title: "Forever Homes",
+              subtitle: "Caso de Estudo UX",
               description:
                 "Forever Homes é uma aplicação web projetada para ajudar a resgatar e reabilitar cães e gatos gravemente feridos ou negligenciados. A aplicação oferece recursos para adoção de animais, doações para a causa, voluntariado e informações sobre eventos futuros.\n RECURSOS\nAdote um Animal: Os usuários podem se inscrever para adotar animais através de um formulário dedicado.\nDoação: Os usuários podem doar para a causa usando vários métodos de pagamento.\nAssinatura de Newsletter: Os usuários podem se inscrever para receber atualizações.",
             },
             furniro: {
               title: "Furniro",
+              subtitle: "Caso de Estudo UX",
               description:
                 "Furniro é um aplicativo desenvolvido para oferecer vendas de móveis online. O aplicativo tem uma interface amigável, com recursos interativos para melhorar a experiência do usuário.\n O projeto foi desenvolvido com ReactTS + Vite e Tailwindcss, usando a API do Firebase para autenticação de usuários, ViaCep para preenchimento dos campos de correspondência, as imagens dos produtos estão hospedadas em um bucket AWS e o projeto está rodando em uma instância AWS EC2, utilizando tecnologias modernas para proporcionar uma experiência rica e interativa aos usuários.",
+            },
+            chromebooks: {
+              title: "Gerenciamento de Chromebooks",
+              subtitle: "Desenvolvimento de Aplicação",
+              description:
+                "Recentemente criei um Sistema de Gerenciamento de Chromebooks, criado para atender a uma necessidade real do meu trabalho: organizar o empréstimo e devolução de dispositivos de forma eficiente e transparente.",
             },
           },
         },

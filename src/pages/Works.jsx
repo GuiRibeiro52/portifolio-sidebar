@@ -22,34 +22,43 @@ function Works() {
 
   return (
     <motion.div
-      className="relative flex h-full ml-[260px] p-10"
+      className="relative flex h-full lg:ml-[260px] p-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 1 }}
     >
-      <div className="flex flex-col justify-center w-full max-w-6xl mx-auto font-ibmPlex">
+      <div className="flex flex-col justify-center w-full max-w-6xl mt-16 lg:mt-0 mx-auto font-ibmPlex">
         <div className="mb-12">
-          <h2 className="text-sm font-semibold italic">{t("works.sectionTitle")}</h2>
+          <h2 className="text-sm font-semibold italic">
+            {t("works.sectionTitle")}
+          </h2>
           <h1 className="text-5xl font-bold mt-4">{t("works.pageTitle")}</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {works.slice(0, visibleCount).map((work) => (
             <div
               key={work.id}
-              className="relative flex justify-between space-y-4 gap-8 shadow-lg rounded-3xl cursor-pointer"
+              className="relative flex flex-col justify-between space-y-4 bg-white shadow-lg rounded-3xl cursor-pointer overflow-hidden"
               onClick={() => handleCardClick(work)}
             >
-              <div className="flex flex-col justify-between p-6">
-                <p className="text-sm font-semibold italic">{t("works.caseStudy")}</p>
-                <h3 className="text-[40px] leading-none font-bold mt-4">{t(work.titleKey)}</h3>
-                <p className="flex items-center mt-2 text-xl font-semibold text-black">→</p>
-              </div>
               <img
                 src={work.image}
                 alt={t(work.titleKey)}
-                className="w-[315px] h-64 object-cover rounded-r-3xl shadow-lg"
+                className="w-full h-48 object-cover"
               />
+              <div className="p-6">
+                <p className="text-sm font-semibold italic">
+                  {t(work.subtitle)}
+                </p>
+                <h3 className="text-2xl leading-none font-bold mt-4">
+                  {t(work.titleKey)}
+                </h3>
+                <p className="flex items-center mt-2 text-lg font-semibold text-black">
+                  →
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -61,7 +70,7 @@ function Works() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 onClick={closeModal}
               >
                 <motion.div
@@ -78,7 +87,9 @@ function Works() {
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">
-                    <h2 className="text-4xl font-bold">{t(selectedWork.titleKey)}</h2>
+                    <h2 className="text-4xl font-bold">
+                      {t(selectedWork.titleKey)}
+                    </h2>
                     {selectedWork.descriptionKey ? (
                       t(selectedWork.descriptionKey)
                         .split("\n")
@@ -116,6 +127,10 @@ function Works() {
             </>
           )}
         </AnimatePresence>
+        <div className="flex justify-center gap-10">
+          <div className="flex justify-center mt-12">
+          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold hover:scale-110 duration-500 transition-transform">Check my GitHub</button>
+        </div>
         {visibleCount < works.length && (
           <div className="flex justify-center mt-12">
             <button
@@ -126,6 +141,8 @@ function Works() {
             </button>
           </div>
         )}
+        </div>
+        
       </div>
     </motion.div>
   );

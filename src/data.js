@@ -2,6 +2,7 @@ export const works = [
   {
     id: 1,
     titleKey: "works.brasfal.title",
+    subtitle: "works.brasfal.subtitle",
     image: "src/assets/images/brasfal.png",
     descriptionKey: "works.brasfal.description",
     link: "https://www.brasfal.com.br",
@@ -9,6 +10,7 @@ export const works = [
   {
     id: 2,
     titleKey: "works.grMaxPlus.title",
+    subtitle: "works.grMaxPlus.subtitle",
     image: "src/assets/images/compassVideo.png",
     descriptionKey: "works.grMaxPlus.description",
     link: "https://hbo-max-clone-seven.vercel.app/",
@@ -16,6 +18,7 @@ export const works = [
   {
     id: 3,
     titleKey: "works.foreverHomes.title",
+    subtitle: "works.foreverHomes.subtitle",
     image: "src/assets/images/ForeverHomes.png",
     descriptionKey: "works.foreverHomes.description",
     link: "https://guiribeiro52.github.io/Forever-Homes/",
@@ -23,8 +26,17 @@ export const works = [
   {
     id: 4,
     titleKey: "works.furniro.title",
+    subtitle: "works.furniro.subtitle",
     image: "src/assets/images/furniro.png",
     descriptionKey: "works.furniro.description",
     link: "https://guiribeiro52.github.io/Furniro/",
+  },
+  {
+    id: 5,
+    titleKey: "works.chromebooks.title",
+    subtitle: "works.chromebooks.subtitle",
+    image: "src/assets/images/chromebooks.png",
+    descriptionKey: "works.chromebooks.description",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7271610777789157376/",
   },
 ];

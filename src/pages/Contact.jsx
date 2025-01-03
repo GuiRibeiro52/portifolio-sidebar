@@ -59,20 +59,20 @@ function Contact() {
 
   return (
     <motion.div
-      className="relative flex h-screen ml-[260px] p-10 items-center justify-center"
+      className="relative flex min-h-screen lg:ml-[260px] p-4 md:p-10 items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 1 }}
     >
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl mx-auto font-ibmPlex">
-        <div className="lg:w-1/2 space-y-6">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl mt-16 lg:mt-0 mx-auto font-ibmPlex gap-4 space-y-6 lg:space-y-0 ">
+        <div className="space-y-6 px-4 w-[288px] sm:w-auto">
           <h2 className="text-lg font-semibold italic">{t("contact.title")}</h2>
           <h1 className="text-5xl font-bold">{t("contact.title")}</h1>
           <p className="italic">{t("contact.address")}</p>
-          <p className="text-3xl font-bold mt-4">+55 16 99466-4262</p>
-          <p className="text-3xl font-bold mt-4">guiriibeiro52@gmail.com</p>
-          <div className="flex gap-6 mt-4">
+          <p className="text-xl sm:text-3xl font-bold mt-4">+55 16 99466-4262</p>
+          <p className="text-xl sm:text-3xl font-bold mt-4">guiriibeiro52@gmail.com</p>
+          <div className="flex gap-6 mt-4 text-sm sm:text-3xl">
             <a
               href="https://www.facebook.com/guilherme.ribeiro.7549?locale=pt_BR"
               target="_blank"
@@ -102,14 +102,14 @@ function Contact() {
             {t("contact.project")}
           </h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={t("contact.name")}
-                className="w-1/2 bg-transparent border-b border-white text-white focus:outline-none placeholder-white"
+                className="w-full md:w-1/2 bg-transparent border-b border-white text-white focus:outline-none placeholder-white"
               />
               <input
                 type="email"
@@ -117,7 +117,7 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t("contact.email")}
-                className="w-1/2 bg-transparent border-b border-white text-white focus:outline-none placeholder-white"
+                className="w-full md:w-1/2 bg-transparent border-b border-white text-white focus:outline-none placeholder-white"
               />
             </div>
             <textarea
@@ -140,13 +140,13 @@ function Contact() {
 
       {success && (
         <motion.div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div className="bg-white  p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-2xl font-bold">{t("contact.successMessageTitle")}</h2>
             <p className="mt-4">{t("contact.successMessageBody")}</p>
             <button
