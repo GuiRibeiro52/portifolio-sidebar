@@ -20,7 +20,7 @@ function About() {
         transition={{ duration: 1 }}
       >
         <div
-          className="w-full h-full max-w-6xl mx-auto"
+          className="w-full h-full max-w-6xl mx-auto p-2 mt-8 lg:mt-0"
           style={{
             transform: "scale(calc(100vh / (1080px)))",
             transformOrigin: "top center",
