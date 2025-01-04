@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import icon from "../assets/images/icons/icon.png";
+import icon from "../assets/images/icons/Icon.png";
 import mail from "../assets/images/icons/mail.png";
 import person from "../assets/images/icons/person.png";
 import pin from "../assets/images/icons/pin.png";
