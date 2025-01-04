@@ -13,7 +13,7 @@ function About() {
   return (
     <div className="flex lg:h-screen justify-center lg:overflow-hidden overflow-auto">
       <motion.div
-        className="flex h-full lg:ml-[260px] p-10 justify-center items-center"
+        className="flex h-full lg:ml-[260px] justify-center items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
@@ -26,7 +26,7 @@ function About() {
             transformOrigin: "top center",
           }}
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:mt-0 w-full lg: p-10">
+          <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:mt-0 w-full">
             <div className="lg:w-1/2 text-center lg:text-left flex flex-col">
               <p className="font-ibmPlex text-lg italic font-semibold">
                 {t("about.greeting")}
@@ -48,7 +48,7 @@ function About() {
               </div>
             </div>
 
-            <div className="lg:w-1/2 mt-12 lg:mt-0">
+            <div className="lg:w-1/2 mt-12 p-4 lg:p-10 lg:mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:text-sm xl:text-lg font-ibmPlex font-bold italic">
                 <div className="flex items-center space-x-3">
                   <img src={icon} alt="phone" />
