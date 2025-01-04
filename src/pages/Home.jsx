@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import img from '../assets/images/Img.png'
 
 function Home() {
   const { t } = useTranslation();
@@ -23,7 +24,7 @@ function Home() {
             </p>
           </div>
           <div className="lg:w-1/2 mt-10 lg:mt-0">
-            <img src="src/assets/images/Img.png" alt="Guilherme" />
+            <img src={img} alt="Guilherme" />
           </div>
         </div>
       </motion.div>

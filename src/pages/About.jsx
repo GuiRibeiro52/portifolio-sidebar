@@ -4,6 +4,7 @@ import icon from "../assets/images/icons/icon.png";
 import mail from "../assets/images/icons/mail.png";
 import person from "../assets/images/icons/person.png";
 import pin from "../assets/images/icons/pin.png";
+import img2 from "../assets/images/Img2.png"
 
 
 function About() {
@@ -35,7 +36,7 @@ function About() {
               </h1>
               <div className="mt-8">
                 <img
-                  src="src/assets/images/Img2.png"
+                  src={img2}
                   alt={t("about.altText", { name: "Guilherme Ribeiro" })}
                   className="mx-auto w-[420px] h-420px] rounded-full"
                 />
@@ -54,15 +55,15 @@ function About() {
                   <span>+55 16 99466-4262</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <img src={person} alt="phone" />
-                  <span>35 yrs</span>
+                  <img src={person} alt="age" />
+                  <span>{t("about.age")}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                <img src={mail} alt="phone" />
+                <img src={mail} alt="mail" />
                   <span>guiriibeiro52@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <img src={pin} alt="phone" />
+                  <img src={pin} alt="locate" />
                   <span>{t("about.city")}</span>
                 </div>
               </div>

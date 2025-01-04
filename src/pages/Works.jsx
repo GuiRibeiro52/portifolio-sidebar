@@ -129,8 +129,8 @@ function Works() {
         </AnimatePresence>
         <div className="flex justify-center gap-10">
           <div className="flex justify-center mt-12">
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold hover:scale-110 duration-500 transition-transform">Check my GitHub</button>
-        </div>
+            <a className="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold hover:scale-110 duration-500 transition-transform" href="https://github.com/GuiRibeiro52" target="_blank">Check my GitHub</a>
+          </div>
         {visibleCount < works.length && (
           <div className="flex justify-center mt-12">
             <button
