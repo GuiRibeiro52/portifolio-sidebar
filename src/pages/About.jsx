@@ -11,9 +11,9 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex lg:h-screen justify-center lg:overflow-hidden overflow-auto">
+    <div>
       <motion.div
-        className="flex h-full lg:ml-[260px] justify-center items-center"
+        className="flex h-full lg:ml-[230px] justify-center items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
@@ -26,9 +26,9 @@ function About() {
             transformOrigin: "top center",
           }}
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:mt-0 w-full">
+          <div className="flex flex-col lg:flex-row xl:items-center justify-center mt-16 lg:mt-0 w-full">
             <div className="lg:w-1/2 text-center lg:text-left flex flex-col">
-              <p className="font-ibmPlex text-lg italic font-semibold">
+              <p className="font-ibmPlex text-lg italic font-semibold lg:mt-8 xl:mt-0">
                 {t("about.greeting")}
               </p>
               <h1 className="text-5xl lg:text-6xl font-bold mt-4 font-ibmPlex">

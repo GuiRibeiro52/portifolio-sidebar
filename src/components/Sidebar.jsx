@@ -21,7 +21,7 @@ function Sidebar() {
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   const changeLanguage = (language) => {
@@ -33,7 +33,7 @@ function Sidebar() {
   };
 
   return (
-    <>   
+    <>     
       <nav className="bg-black text-white fixed w-full z-50 flex items-center justify-between px-4 py-3 lg:hidden">
         <div className="flex items-center">
           <img src="logoGR.svg" alt="GR Logo" className="h-8 mr-4" />
@@ -58,18 +58,24 @@ function Sidebar() {
           </button>
         </div>
       </nav>
+
       
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-black text-white flex flex-col justify-between z-40 transform transition-transform duration-1000 ease-in-out ${
+        className={`fixed top-0 left-0 h-full bg-black text-white flex flex-col justify-between z-40 transform transition-transform duration-1000 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 lg:flex lg:w-64`}
+        } lg:translate-x-0 lg:flex lg:w-56 w-[220px]`}
       >
+        
         <div>
-          <div className="flex pt-14 px-10">
-            <img src="LogotipoGR.png" alt="GR logo" className="size-9/12"/>
+          <div className="flex justify-center items-center py-8 px-6 mt-3">
+            <img
+              src="LogotipoGR.png"
+              alt="GR logo"
+              className="w-[60%] max-w-[150px] lg:max-w-full"
+            />
           </div>
-          <nav className="mt-24 px-10">
-            <ul className="space-y-4 text-xl text-gray-400">
+          <nav className="px-4">
+            <ul className="space-y-3 text-lg text-gray-400 ml-8">
               {[
                 { id: "home", label: t("sidebar.home"), path: "/" },
                 { id: "about", label: t("sidebar.about"), path: "/about" },
@@ -81,7 +87,7 @@ function Sidebar() {
                     to={link.path}
                     onClick={() => handleLinkClick(link.id)}
                     className={({ isActive }) =>
-                      `relative text-xl group ${
+                      `relative text-lg group ${
                         isActive ? "text-white" : ""
                       }`
                     }
@@ -100,59 +106,73 @@ function Sidebar() {
             </ul>
           </nav>
         </div>
-        <div className="flex items-center justify-between mt-4 px-10 gap-4">
-          <a
-            href="https://api.whatsapp.com/send?phone=5516994664262"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp size={40} color="#25D366" />
-          </a>
-          <a
-            href="https://www.instagram.com/guilhermeribeiroo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={40} color="#E4405F" />
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={40} color="#0077B5" />
-          </a>
+
+        
+        <div className="px-6">
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <a
+              href="https://api.whatsapp.com/send?phone=5516994664262"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={30} color="#25D366" />
+            </a>
+            <a
+              href="https://www.instagram.com/guilhermeribeiroo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={30} color="#E4405F" />
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={30} color="#0077B5" />
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-4 mt-4">
+            <button
+              onClick={() => changeLanguage("en")}
+              className="focus:outline-none"
+            >
+              <img
+                src={usaFlag}
+                alt="USA flag"
+                className="w-6 rounded-full hover:scale-110 transition-transform"
+              />
+            </button>
+            <button
+              onClick={() => changeLanguage("pt")}
+              className="focus:outline-none"
+            >
+              <img
+                src={brazilFlag}
+                alt="Brazil flag"
+                className="w-6 rounded-full hover:scale-110 transition-transform"
+              />
+            </button>
+          </div>
         </div>
-        <div className="flex items-center justify-center gap-4">
-          <button onClick={() => changeLanguage("en")} className="focus:outline-none">
-            <img
-              src={usaFlag}
-              alt="USA flag"
-              className="w-8 rounded-full hover:scale-110 transition-transform"
-            />
-          </button>
-          <button onClick={() => changeLanguage("pt")} className="focus:outline-none">
-            <img
-              src={brazilFlag}
-              alt="Brazil flag"
-              className="w-8 rounded-full hover:scale-110 transition-transform"
-            />
-          </button>
-        </div>
-        <div className="p-8 text-sm opacity-80">
+
+        
+        <div className="p-4 text-xs text-center text-gray-500">
           <p>&copy; 2024 Guilherme Ribeiro.</p>
           <p>{t("sidebar.rights")}</p>
         </div>
-        
       </div>
 
       
       {isMenuOpen && (
         <motion.div
-          className="fixed inset-0 bg-black flex flex-col justify-center items-center lg:hidden z-30"
+          className="fixed inset-0 bg-black bg-opacity-70 lg:hidden z-30"
           onClick={toggleMenu}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.7 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         ></motion.div>

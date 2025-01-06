@@ -22,7 +22,7 @@ function Works() {
 
   return (
     <motion.div
-      className="relative flex h-full lg:ml-[260px] p-10"
+      className="relative flex h-full lg:ml-[230px] p-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}

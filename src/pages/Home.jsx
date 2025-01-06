@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="flex lg:h-screen justify-center overflow-hidden">
       <motion.div
-        className="flex h-full lg:ml-[260px] p-2 lg:p-10 justify-center items-center"
+        className="flex h-full lg:ml-[230px] p-2 lg:p-10 justify-center items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}

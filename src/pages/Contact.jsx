@@ -60,7 +60,7 @@ function Contact() {
 
   return (
     <motion.div
-      className="relative flex min-h-screen lg:ml-[260px] p-4 md:p-10 items-center justify-center"
+      className="relative flex min-h-screen lg:ml-[230px] p-4 md:p-10 items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}

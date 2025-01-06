@@ -3,6 +3,7 @@ import chromebooks from './assets/images/chromebooks.png'
 import compassVideo from './assets/images/compassVideo.png'
 import ForeverHomes from './assets/images/ForeverHomes.png'
 import furniro from './assets/images/furniro.png'
+import portifolio from './assets/images/portifolio.png'
 
 
 export const works = [
@@ -45,5 +46,12 @@ export const works = [
     image: chromebooks,
     descriptionKey: "works.chromebooks.description",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7271610777789157376/",
+  },{
+    id: 6,
+    titleKey: "works.portifolio.title",
+    subtitle: "works.portifolio.subtitle",
+    image: portifolio,
+    descriptionKey: "works.portifolio.description",
+    link: "https://portifolio-react-eight-kappa.vercel.app/",
   },
 ];

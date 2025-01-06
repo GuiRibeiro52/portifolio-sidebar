@@ -92,6 +92,12 @@ i18n
               description:
                 "I recently created a Chromebook Management System, created to meet a real need in my work: organizing the loan and return of devices in an efficient and transparent way.",
             },
+            portifolio: {
+              title: "Portfolio Landing Page",
+              subtitle: "Application development",
+              description:
+                "Previously I created a Landing Page version which I used until January 2025. In this project I used React JavaScript.",
+            },
           },
         },
       },
@@ -178,6 +184,12 @@ i18n
               subtitle: "Desenvolvimento de Aplicação",
               description:
                 "Recentemente criei um Sistema de Gerenciamento de Chromebooks, criado para atender a uma necessidade real do meu trabalho: organizar o empréstimo e devolução de dispositivos de forma eficiente e transparente.",
+            },
+            portifolio: {
+              title: "Portifolio Landing Page",
+              subtitle: "Desenvolvimento de Aplicação",
+              description:
+                "Anteriormente criei uma versão de Landing Page a qual usei até Janeiro de 2025. Nesse projeto usei React JavaScript.",
             },
           },
         },
