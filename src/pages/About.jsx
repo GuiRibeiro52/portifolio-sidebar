@@ -4,14 +4,19 @@ import icon from "../assets/images/icons/Icon.png";
 import mail from "../assets/images/icons/mail.png";
 import person from "../assets/images/icons/person.png";
 import pin from "../assets/images/icons/pin.png";
-import img2 from "../assets/images/Img2.png"
-
+import img2 from "../assets/images/Img2.png";
+import SEO from '../components/SEO';
 
 function About() {
   const { t } = useTranslation();
 
   return (
     <div>
+      <SEO 
+        title="Guilherme Ribeiro | About"
+        description={t('about.description')}
+        image="/assets/images/Img2.png"
+      />
       <motion.div
         className="flex h-full lg:ml-[230px] justify-center items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -21,10 +26,6 @@ function About() {
       >
         <div
           className="w-full h-full max-w-6xl mx-auto p-2 mt-8 lg:mt-0"
-          style={{
-            transform: "scale(calc(100vh / (1080px)))",
-            transformOrigin: "top center",
-          }}
         >
           <div className="flex flex-col lg:flex-row xl:items-center justify-center mt-16 lg:mt-0 w-full">
             <div className="lg:w-1/2 text-center lg:text-left flex flex-col">
@@ -38,12 +39,12 @@ function About() {
                 <img
                   src={img2}
                   alt={t("about.altText", { name: "Guilherme Ribeiro" })}
-                  className="mx-auto w-[420px] h-420px] rounded-full"
+                  className="mx-auto w-full max-w-[420px] h-auto rounded-full"
                 />
               </div>
               <div className="text-center mt-4">
                 <p className="font-ibmPlex italic font-bold text-2xl">
-                  {t("about.developer")} <spam className="font-normal">{t("about.based")}</spam> {t("about.country")}                
+                  {t("about.developer")} <span className="font-normal">{t("about.based")}</span> {t("about.country")}                
                 </p>
               </div>
             </div>

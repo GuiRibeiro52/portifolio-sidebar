@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { works } from "../data";
+import SEO from "../components/SEO";
 
 function Works() {
   const { t } = useTranslation();
@@ -21,13 +22,18 @@ function Works() {
   };
 
   return (
-    <motion.div
-      className="relative flex h-full lg:ml-[230px] p-10"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 1 }}
-    >
+    <>
+      <SEO 
+        title="Guilherme Ribeiro | Works"
+        description={t("works.sectionTitle")}
+      />
+      <motion.div
+        className="relative flex h-full lg:ml-[230px] p-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 1 }}
+      >
       <div className="flex flex-col justify-center w-full max-w-6xl mt-16 lg:mt-0 mx-auto font-ibmPlex">
         <div className="mb-12">
           <h2 className="text-sm font-semibold italic">
@@ -145,6 +151,7 @@ function Works() {
         
       </div>
     </motion.div>
+    </>
   );
 }
 

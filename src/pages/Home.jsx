@@ -1,13 +1,17 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import img from '../assets/images/Img.png'
+import img from '../assets/images/Img.png';
+import SEO from '../components/SEO';
 
 function Home() {
   const { t } = useTranslation();
 
   return (
     <div className="flex lg:h-screen justify-center overflow-hidden">
+      <SEO 
+        title="Guilherme Ribeiro | Home"
+        description={t('home.subtitle')}
+      />
       <motion.div
         className="flex h-full lg:ml-[230px] p-2 lg:p-10 justify-center items-center"
         initial={{ opacity: 0, y: 50 }}

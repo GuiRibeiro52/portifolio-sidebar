@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -109,30 +109,42 @@ function Sidebar() {
 
         
         <div className="px-6">
-          <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="flex items-center justify-center gap-3 mt-6">
             <a
               href="https://api.whatsapp.com/send?phone=5516994664262"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
+              className="focus:outline-none focus:ring-2 focus:ring-green-500 rounded-full p-1"
             >
-              <FaWhatsapp size={30} color="#25D366" />
+              <FaWhatsapp size={24} color="#25D366" />
             </a>
             <a
               href="https://www.instagram.com/guilhermeribeiroo"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              className="focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-full p-1"
             >
-              <FaInstagram size={30} color="#E4405F" />
+              <FaInstagram size={24} color="#E4405F" />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/guilherme-ribeiro52/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-1"
             >
-              <FaLinkedin size={30} color="#0077B5" />
+              <FaLinkedin size={24} color="#0077B5" />
+            </a>
+            <a
+              href="https://github.com/GuiRibeiro52"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="focus:outline-none focus:ring-2 focus:ring-gray-500 rounded-full p-1"
+            >
+              <FaGithub size={24} color="#ffffff" />
             </a>
           </div>
           <div className="flex items-center justify-center gap-4 mt-4">
