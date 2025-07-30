@@ -78,7 +78,7 @@ function Contact() {
           <h1 className="text-5xl font-bold">{t("contact.title")}</h1>
           <p className="italic">{t("contact.address")}</p>
           <p className="text-xl sm:text-3xl font-bold mt-4">+55 16 99466-4262</p>
-          <p className="text-xl sm:text-3xl font-bold mt-4">guiriibeiro52@gmail.com</p>
+          <p className="text-xl sm:text-3xl font-bold mt-4">contato@guilhermeribeiro.dev.br</p>
           <div className="flex gap-6 mt-4 text-sm sm:text-3xl">
             <a
               href="https://www.facebook.com/guilherme.ribeiro.7549?locale=pt_BR"

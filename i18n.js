@@ -27,7 +27,7 @@ i18n
             developer: "Front-End Developer",
             based: "based in",
             country: "Brazil",
-            age: "35 yrs",
+            age: "36 yrs",
             city: "Brazil, Franca",
             years: "Years as an Inspiring Educator...",
             clients: "Development Projects",
